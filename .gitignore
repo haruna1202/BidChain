@@ -44,3 +44,13 @@ dist/
 *.zip
 *backup*.sql
 *.log
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.server.example
+!.env.local.example
+*.zip
+*backup*.sql
+*.log
