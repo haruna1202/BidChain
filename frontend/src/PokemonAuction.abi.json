@@ -1,4 +1,5 @@
 {
+  "contractName": "PokemonAuction",
   "abi": [
     {
       "inputs": [],
@@ -25,19 +26,6 @@
       "type": "event"
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "bid",
-      "outputs": [],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
@@ -61,19 +49,6 @@
       ],
       "name": "BidPlaced",
       "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "cancelAuction",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
     },
     {
       "anonymous": false,
@@ -114,79 +89,6 @@
       "type": "event"
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "confirmReceived",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "cardId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "startPrice",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "bidStep",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "durationMinutes",
-          "type": "uint256"
-        }
-      ],
-      "name": "createAuction",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "bytes32",
-          "name": "evidenceHash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "DisputeOpened",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "endAuction",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
@@ -212,207 +114,6 @@
       "type": "event"
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "shippingHash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "markShipped",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "evidenceHash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "openDispute",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "shippingTime",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "responseTime",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "disputeTime",
-          "type": "uint256"
-        }
-      ],
-      "name": "PeriodsUpdated",
-      "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "refundDisputeTimeout",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "refundUnshipped",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes32",
-          "name": "certificateKey",
-          "type": "bytes32"
-        },
-        {
-          "internalType": "uint256",
-          "name": "profileId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bytes32",
-          "name": "metadataHash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "registerCard",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        }
-      ],
-      "name": "releaseAfterTimeout",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bool",
-          "name": "paySeller",
-          "type": "bool"
-        }
-      ],
-      "name": "resolveDispute",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "cardId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bool",
-          "name": "approved",
-          "type": "bool"
-        }
-      ],
-      "name": "reviewCard",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "shippingTime",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "responseTime",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "disputeTime",
-          "type": "uint256"
-        }
-      ],
-      "name": "setPeriods",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "auctionId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "bytes32",
-          "name": "shippingHash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "ShipmentMarked",
-      "type": "event"
-    },
-    {
       "anonymous": false,
       "inputs": [
         {
@@ -430,13 +131,6 @@
       ],
       "name": "StatusChanged",
       "type": "event"
-    },
-    {
-      "inputs": [],
-      "name": "withdraw",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
     },
     {
       "anonymous": false,
@@ -468,6 +162,32 @@
         }
       ],
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auctionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "bid",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auctionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelAuction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -515,6 +235,11 @@
         },
         {
           "internalType": "bool",
+          "name": "reviewed",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
           "name": "approved",
           "type": "bool"
         },
@@ -547,16 +272,44 @@
       "type": "function"
     },
     {
-      "inputs": [],
-      "name": "disputePeriod",
-      "outputs": [
+      "inputs": [
         {
           "internalType": "uint256",
-          "name": "",
+          "name": "cardId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "startPrice",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "bidStep",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "durationMinutes",
           "type": "uint256"
         }
       ],
-      "stateMutability": "view",
+      "name": "createAuction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auctionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "endAuction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -599,36 +352,6 @@
             {
               "internalType": "uint256",
               "name": "highestBid",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "shippingTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "responseTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "disputeTime",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "shippingDeadline",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "responseDeadline",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "disputeDeadline",
               "type": "uint256"
             },
             {
@@ -691,29 +414,51 @@
       "type": "function"
     },
     {
-      "inputs": [],
-      "name": "responsePeriod",
-      "outputs": [
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "certificateKey",
+          "type": "bytes32"
+        },
         {
           "internalType": "uint256",
-          "name": "",
+          "name": "profileId",
           "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "metadataHash",
+          "type": "bytes32"
         }
       ],
-      "stateMutability": "view",
+      "name": "registerCard",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "cardId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "approved",
+          "type": "bool"
+        }
+      ],
+      "name": "reviewCard",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
       "inputs": [],
-      "name": "shippingPeriod",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ]
