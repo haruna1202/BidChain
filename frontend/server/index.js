@@ -3,6 +3,7 @@ import express from 'express';
 import mysql from 'mysql2/promise';
 import multer from 'multer';
 import path from 'node:path';
+import { mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 
@@ -11,6 +12,8 @@ dotenv.config({ path: path.resolve(here, '../.env.server') });
 const app = express();
 const port = Number(process.env.API_PORT || 4000);
 const uploadDir = path.join(here, 'uploads');
+// Multer requires its destination to exist before the first file is uploaded.
+mkdirSync(uploadDir, { recursive: true });
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST || '127.0.0.1',
