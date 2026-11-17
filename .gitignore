@@ -34,3 +34,13 @@ dist/
 *.zip
 *backup*.sql
 .vscode/
+
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.server.example
+*.zip
+*backup*.sql
+*.log
