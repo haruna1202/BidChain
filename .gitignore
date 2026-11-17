@@ -1,0 +1,36 @@
+
+# Thu vien va file build
+node_modules/
+dist/
+*.log
+
+# Thong tin bi mat
+.env
+.env.*
+!.env.example
+!.env.server.example
+!.env.local.example
+
+# File sao luu va file nen
+*backup*.sql
+*.zip
+
+# File tam
+.vscode/
+
+# Node.js
+node_modules/
+dist/
+*.log
+
+# Thong tin bao mat
+.env
+.env.*
+!.env.example
+!.env.server.example
+!.env.local.example
+
+# File khong can dua len GitHub
+*.zip
+*backup*.sql
+.vscode/
